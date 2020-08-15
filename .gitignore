@@ -1,0 +1,14 @@
+#IntelliJ
+.idea/
+*.iml
+*.iws
+
+#Mac
+.DS_STORE
+
+#Maven
+log/
+target/
+
+#Generated files
+dependency-reduced-pom.xml
