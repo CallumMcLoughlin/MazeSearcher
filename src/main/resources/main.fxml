@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.bootstrapfx.scene.layout.Panel?>
+<?import MazeSearcher.gui.CanvasGrid?>
+
+<BorderPane fx:id="rootPane" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MazeSearcher.gui.controller.CanvasController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="50" prefWidth="Infinity">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="71.0" text="Grid Size" textAlignment="CENTER">
+               <styleClass>
+                  <String fx:value="lbl" />
+                  <String fx:value="lbl-primary" />
+                  <String fx:value="h3" />
+               </styleClass>
+            </Label>
+            <Slider fx:id="gridSizeSlider" majorTickUnit="10.0" max="50.0" min="5.0" minorTickCount="1" prefHeight="25.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="20.0" />
+            <Panel visible="false" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="60.0" text="Reset" onMouseClicked="#CalculateAndDrawGrid" translateX="-10.0">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-sm" />
+                  <String fx:value="btn-primary" />
+               </styleClass>
+            </Button>
+         </children></HBox>
+    </top>
+    <center>
+       <CanvasGrid fx:id="canvasGrid" height="1000" width="1000" onMouseClicked="#MouseClicked" onMouseDragged="#MouseClicked"/>
+    </center>
+</BorderPane>

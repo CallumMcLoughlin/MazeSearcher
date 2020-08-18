@@ -10,5 +10,8 @@
 log/
 target/
 
+#Build
+out/
+
 #Generated files
 dependency-reduced-pom.xml
